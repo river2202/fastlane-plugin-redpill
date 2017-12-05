@@ -1,5 +1,5 @@
 module Fastlane
   module Redpill
-    VERSION = "0.0.1-910210"
+    VERSION = "0.0.2"
   end
 end
