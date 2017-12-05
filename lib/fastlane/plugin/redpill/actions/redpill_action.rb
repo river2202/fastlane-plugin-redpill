@@ -1,6 +1,6 @@
 module Fastlane
   module Actions
-    class BluepillAction < Action
+    class RedpillAction < Action
       def self.run(params)
         UI.message("Start test by using Bluepill: https://github.com/linkedin/bluepill")
         cmd =  bin_bluepill.to_s
