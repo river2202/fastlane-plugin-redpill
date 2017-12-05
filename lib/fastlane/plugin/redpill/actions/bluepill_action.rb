@@ -4,7 +4,7 @@ module Fastlane
       def self.run(params)
         UI.message("Start test by using Bluepill: https://github.com/linkedin/bluepill")
         cmd =  bin_bluepill.to_s
-        cmd << " #{params[:xctestrun]}"
+        cmd << " #{params[:xctestrun_path]}"
         cmd << " -o #{params[:output_dir]}"
         cmd << " -a #{params[:app]}"
         cmd << " -d '#{params[:device]}'"
@@ -208,16 +208,7 @@ module Fastlane
       end
 
       def self.example_code
-        [
-          'bluepill(
-                scheme: "path/to/SomeApp.xcscheme",
-                output_dir: "path/to/output_dir", FastlaneCore::ConfigItem.new(key: :app,
-                                       env_name: 'BLUEPILL_app',
-                                       description: 'Bluepill\'s output dir such as log file',
-                                       optional: false,
-                                       is_string: true),
-          )'
-        ]
+        ['bluepill(xctestrun_path: "path/to/SomeApp.xctestrun", output_dir: "path/to/reports")']
       end
     end
   end
