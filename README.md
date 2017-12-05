@@ -73,7 +73,7 @@ lane :test do
     only_retry_failed: false,
 
     # What runtime to use.
-    runtime: iOS 11.1,
+    runtime: 'iOS 11.1',
 
     # Timeout in seconds for a test that seems stuck (no output).
     stuck_timeout: '300s',
