@@ -87,6 +87,7 @@ module Fastlane
                                        env_name: 'REDPILL_HEADLESS',
                                        description: 'Run in headless mode (no GUI)',
                                        default_value: false,
+                                       type: TrueClass,
                                        optional: true),
 
           FastlaneCore::ConfigItem.new(key: :xcode_path,
@@ -107,18 +108,21 @@ module Fastlane
                                        env_name: 'REDPILL_JSON_OUTPUT',
                                        description: 'Print test timing information in JSON format',
                                        optional: true,
+                                       type: TrueClass,
                                        default_value: false),
 
           FastlaneCore::ConfigItem.new(key: :junit_output,
                                        env_name: 'REDPILL_JUNIT_OUTPUT',
                                        description: 'Print results in JUnit format',
                                        optional: true,
+                                       type: TrueClass,
                                        default_value: true),
 
           FastlaneCore::ConfigItem.new(key: :list_tests,
                                        env_name: 'REDPILL_LIST_TESTS',
                                        description: 'Only list tests in bundle',
                                        optional: true,
+                                       type: TrueClass,
                                        default_value: false),
 
           FastlaneCore::ConfigItem.new(key: :num_sims,
@@ -132,6 +136,7 @@ module Fastlane
                                        env_name: 'REDPILL_PLAIN_OUTPUT',
                                        description: 'Print results in plain text',
                                        optional: true,
+                                       type: TrueClass,
                                        default_value: false),
 
           FastlaneCore::ConfigItem.new(key: :error_retries,
@@ -152,6 +157,7 @@ module Fastlane
                                        env_name: 'REDPILL_ONLY_RETRY_FAILED',
                                        description: 'When failure_tolerance > 0, only retry tests that failed',
                                        optional: true,
+                                       type: TrueClass,
                                        default_value: false),
 
           FastlaneCore::ConfigItem.new(key: :runtime,
@@ -186,6 +192,7 @@ module Fastlane
                                        env_name: 'REDPILL_REUSE_SIMULATOR',
                                        description: 'Enable reusing simulators between test bundles',
                                        optional: true,
+                                       type: TrueClass,
                                        default_value: false),
 
           FastlaneCore::ConfigItem.new(key: :diagnostics,
