@@ -14,8 +14,6 @@ fastlane add_plugin redpill
 
 ## Example
 
-Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
-
 Here is some example code with all the available options listed. Not all are required; see Bluepill's docs for details and defaults:
 
 ```ruby
