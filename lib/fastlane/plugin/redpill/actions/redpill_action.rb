@@ -9,8 +9,8 @@ module Fastlane
         cmd << " -a #{params[:app]}"
         cmd << " -d '#{params[:device]}'"
         cmd << " -r '#{params[:runtime]}'"
-        cmd << " -e #{params[:exclude].join(' -e ')}" if params[:exclude]
-        cmd << " -i #{params[:include].join(' -i ')}" if params[:include]
+        cmd << " -e #{params[:exclude].join(' -e ')}" if params[:exclude].length > 0
+        cmd << " -i #{params[:include].join(' -i ')}" if params[:include].length > 0
         cmd << " -H" if params[:headless]
         cmd << " -X #{params[:xcode_path]}"
         cmd << " -J" if params[:json_output]
