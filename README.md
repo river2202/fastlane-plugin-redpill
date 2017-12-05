@@ -34,16 +34,16 @@ lane :test do
     output_dir: 'path/to/logs',
 
     # On which device to run the app.
-    device: 'iPhone 6'
+    device: 'iPhone 6',
 
     # Exclude a testcase in the set of tests to run (takes priority over include).
     exclude: ['SomeApp/SomeTestSuite/testSomeCase'],
 
     # Run in headless mode (no GUI).
-    headless: false
+    headless: false,
 
     # Path to xcode app.
-    xcode_path: `xcode-select -p`
+    xcode_path: `xcode-select -p`,
 
     # Include a testcase in the set of tests to run (unless specified in exclude).
     include: ['SomeApp/SomeTestSuite/testSomeCase'],
