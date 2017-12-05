@@ -92,8 +92,8 @@ module Fastlane
 
           FastlaneCore::ConfigItem.new(key: :xcode_path,
                                        env_name: 'REDPILL_XCODE_PATH',
-                                       description: 'Path to xcode app',
-                                       default_value: `xcode-select -p`,
+                                       description: 'Path to xcode developer directory',
+                                       default_value: `xcode-select -p`.strip,
                                        optional: true,
                                        type: String),
 
