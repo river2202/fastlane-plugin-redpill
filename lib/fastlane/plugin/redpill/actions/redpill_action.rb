@@ -6,13 +6,13 @@ module Fastlane
         cmd =  bin_bluepill.to_s
         cmd << " --xctestrun-path #{params[:xctestrun_path]}"
         cmd << " -o #{params[:output_dir]}"
-        cmd << " -a #{params[:app]}"
+        cmd << " -a #{params[:app]}" if params[:app]
         cmd << " -d '#{params[:device]}'"
         cmd << " -r '#{params[:runtime]}'"
         cmd << " -e #{params[:exclude].join(' -e ')}" if params[:exclude].length > 0
         cmd << " -i #{params[:include].join(' -i ')}" if params[:include].length > 0
         cmd << " -H" if params[:headless]
-        cmd << " -X #{params[:xcode_path]}"
+        cmd << " -X #{params[:xcode_path]}" if params[:xcode_path]
         cmd << " -J" if params[:json_output]
         cmd << " -j" if params[:junit_output]
         cmd << " -p" if params[:plain_output]
@@ -93,7 +93,6 @@ module Fastlane
           FastlaneCore::ConfigItem.new(key: :xcode_path,
                                        env_name: 'REDPILL_XCODE_PATH',
                                        description: 'Path to xcode developer directory',
-                                       default_value: `xcode-select -p`.strip,
                                        optional: true,
                                        type: String),
 
